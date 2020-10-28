@@ -1,8 +1,13 @@
 # flask-example-app
-
 Example repository for deploying a Flask app on a container using Gunicorn as a WSGI server.
+#
 
-Build and run with the following commands:
+## Requirements:
+- [Docker](https://docs.docker.com/get-docker/)
+- [docker-compose](https://docs.docker.com/compose/install/) (optional)
+
+## How to try it:
+Build and run using the following commands:
 
 ```
 $ docker build . -t flask-docker-example:latest

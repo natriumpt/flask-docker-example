@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-docker-example-deployment
+spec:
+  selector:
+    matchLabels:
+      app: flask-docker-example
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: flask-docker-example
+    spec:
+      containers:
+      - name: flask-docker-example
+        image: natriumpt/flask-docker-example:latest
+        ports:
+          - name: web
+            containerPort: 5000
